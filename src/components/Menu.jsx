@@ -47,29 +47,30 @@ const Img = styled.img`
 
 const Item = styled.div`
   display: flex;
-  align-items: center;
   gap: 20px;
   cursor: pointer;
   padding: 10px;
-
+  alignItems: center,
   border-radius: 10px;
 `;
 
 const Hr = styled.hr`
   margin: 15px 0px;
-  border: 0.5px solid ${({ theme }) => theme.soft};
+  border: 0.1px solid #373737;
 `;
+
+const Login = styled.div``;
 const Menu = ({ open, onClose, placement }) => {
   const handleToggleDrawer = () => {
     onClose(); // Close the drawer when toggle is clicked
   };
 
   const Title = styled.h2`
-  font-size: 14px;
-  font-weight: 500;
-  color: #aaaaaa;
-  margin-bottom: 20px;
-`;
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+  `;
   return (
     <Drawer
       placement={placement}
@@ -114,44 +115,62 @@ const Menu = ({ open, onClose, placement }) => {
             History
           </Item>
           <Hr />
-        <Title>BEST OF LAMATUBE</Title>
-        <Item>
-          <LibraryMusicOutlinedIcon />
-          Music
-        </Item>
-        <Item>
-          <SportsBasketballOutlinedIcon />
-          Sports
-        </Item>
-        <Item>
-          <SportsEsportsOutlinedIcon />
-          Gaming
-        </Item>
-        <Item>
-          <MovieOutlinedIcon />
-          Movies
-        </Item>
-        <Item>
-          <ArticleOutlinedIcon />
-          News
-        </Item>
-        <Item>
-          <LiveTvOutlinedIcon />
-          Live
-        </Item>
-        <Hr />
-        <Item>
-          <SettingsOutlinedIcon />
-          Settings
-        </Item>
-        <Item>
-          <FlagOutlinedIcon />
-          Report
-        </Item>
-        <Item>
-          <HelpOutlineOutlinedIcon />
-          Help
-        </Item>
+          <Login>
+            Sign in to like videos, comment, and subscribe.
+            <Button
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "5px",
+                marginTop: "10px",
+                fontWeight: "500",
+                fontSize: "10px",
+              }}
+              type="primary"
+              ghost
+            >
+              <AccountCircleOutlinedIcon style={{ fontSize: "18px" }} /> SIGN IN
+            </Button>
+          </Login>
+          <Hr />
+          <Title>BEST OF LAMATUBE</Title>
+          <Item>
+            <LibraryMusicOutlinedIcon />
+            Music
+          </Item>
+          <Item>
+            <SportsBasketballOutlinedIcon />
+            Sports
+          </Item>
+          <Item>
+            <SportsEsportsOutlinedIcon />
+            Gaming
+          </Item>
+          <Item>
+            <MovieOutlinedIcon />
+            Movies
+          </Item>
+          <Item>
+            <ArticleOutlinedIcon />
+            News
+          </Item>
+          <Item>
+            <LiveTvOutlinedIcon />
+            Live
+          </Item>
+          <Hr />
+          <Item>
+            <SettingsOutlinedIcon />
+            Settings
+          </Item>
+          <Item>
+            <FlagOutlinedIcon />
+            Report
+          </Item>
+          <Item>
+            <HelpOutlineOutlinedIcon />
+            Help
+          </Item>
           <Hr />
         </Wrapper>
       </Container>
