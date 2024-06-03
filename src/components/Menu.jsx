@@ -19,8 +19,8 @@ import { Drawer, Button, Space } from "antd";
 import { MenuOutlined, HomeFilled, CompassOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 const Container = styled.div`
-  background-color: #202020;
-  color: white;
+  background-color: ${({theme})=>theme.bg};
+  color: ${({theme})=>theme.text};
   font-size: 14px;
 `;
 
@@ -52,15 +52,16 @@ const Item = styled.div`
   padding: 10px;
   alignItems: center,
   border-radius: 10px;
+  
 `;
 
 const Hr = styled.hr`
   margin: 15px 0px;
-  border: 0.1px solid #373737;
+  border: 0.1px solid ${({theme})=>theme.soft};
 `;
 
 const Login = styled.div``;
-const Menu = ({ open, onClose, placement }) => {
+const Menu = ({ open, onClose, placement, darkMode, setDarkMode }) => {
   const handleToggleDrawer = () => {
     onClose(); // Close the drawer when toggle is clicked
   };
@@ -172,6 +173,7 @@ const Menu = ({ open, onClose, placement }) => {
             Help
           </Item>
           <Hr />
+          <Item onClick={() => setDarkMode(!darkMode)}><SettingsBrightnessOutlinedIcon/> {darkMode ? "Light" : "Dark"} Mode</Item>
         </Wrapper>
       </Container>
     </Drawer>
