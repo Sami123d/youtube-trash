@@ -19,7 +19,7 @@ import { Drawer, Button, Space } from "antd";
 import { MenuOutlined, HomeFilled, CompassOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 const Container = styled.div`
-  background-color: ${({theme})=>theme.bg};
+  background-color: ${({theme})=>theme.bgLighter};
   color: ${({theme})=>theme.text};
   font-size: 14px;
 `;
@@ -86,7 +86,7 @@ const Menu = ({ open, onClose, placement, darkMode, setDarkMode }) => {
           {" "}
           <Header>
             <MenuOutlined
-              style={{ fontSize: "20px", cursor: "pointer" }}
+              style={{ height: "30px", cursor: "pointer" }}
               onClick={handleToggleDrawer}
             />
             <Logo className="yt-logo">
