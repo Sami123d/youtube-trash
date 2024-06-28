@@ -6,6 +6,8 @@ import {
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import React from "react";
 import styled from "styled-components";
+import Comments from "../components/Comments";
+import Card from "../components/Card";
 
 const Container = styled.div`
   display: flex;
@@ -149,9 +151,13 @@ const Video = () => {
             <Subscribe> Subscribe</Subscribe>
           </ChannelInfo>
         </Channel>
+        <Hr />
+        <Comments/>   
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/><Card type="sm"/></Recommendation>
+      
     </Container>
+    
   );
 };
 

@@ -7,13 +7,14 @@ import { darkTheme, lightTheme } from "./utils/Theme";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"; // Update import statemen
 import Home from "./pages/Home";
 import Video from "./pages/Video";
+import SignIn from "./pages/SignIn";
 
 const Container = styled.div``;
 const Main = styled.div`
   background-color: ${({ theme }) => theme.bg};
 `;
 const MainWrap = styled.div``;
-const Wrapper = styled.div`padding: 22px 96px;`;
+const Wrapper = styled.div`padding: 22px 40px;`;
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
             <Routes>
               <Route path="/">
                 <Route  index element={<Home />}></Route>
+                <Route path="signin" element={<SignIn />} />
                 <Route path="video">
                   <Route path=":id" element={<Video />}></Route>
                 </Route>

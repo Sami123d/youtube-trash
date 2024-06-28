@@ -53,6 +53,9 @@ const Item = styled.div`
   alignItems: center,
   border-radius: 10px;
   
+   &:hover {
+    background-color: ${({ theme }) => theme.soft};
+  }
 `;
 
 const Hr = styled.hr`
