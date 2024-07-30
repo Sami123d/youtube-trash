@@ -9,7 +9,7 @@ const Container = styled.div`
   display: ${(props) => props.type === "sm" && "flex"};
   gap: 10px;
 `;
-
+// img should be proper 
 const Img = styled.img`
   width: 60%;
   height: ${(props) => (props.type === "sm" ? "120px" : "202px")};
