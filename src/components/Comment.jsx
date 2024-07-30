@@ -47,7 +47,7 @@ const Comment = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, ex
           laboriosam ipsam aliquam voluptatem perferendis provident modi, sequi
           tempore reiciendis quod, optio ullam cumque? Quidem numquam sint
-          mollitia totam reiciendis?
+          mollitia totam reiciendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda accusamus fugit eaque blanditiis quibusdam magnam impedit itaque inventore ipsam nam ratione ea atque, ducimus enim aut maxime! Sed, recusandae sapiente?
         </Text>
       </Details>
     </Container>
